@@ -1,0 +1,117 @@
+
+    
+
+
+    
+    <div style="clear: both; position: relative; top: 40px;">
+      <hr >
+      
+      <h2 style="position: relative; left: 20px;" > <u>Tuition Information</u> </h2>
+    
+      <div style="position: relative; left: 70px;" >
+       <p> <i>Class(s) :</i> <b style="text-transform: uppercase;"> <%=user.classes%></b>   </p>
+       <p> <i>Subject(s) :</i> <b style="text-transform: uppercase;"> <%=user.subjects%></b> </p>
+       <p> <i>Medium :</i> <b> <%=user.medium%></b>   </p>
+       <p> <i>Salary (in Taka):</i> <b> <%=user.salary%></b>   </p>     
+      </div>
+      <button style="float: right; position: relative; right: 15px;" type="button" class="btn btn-warning" data-toggle="modal" data-target="#tuitionInformation"title="Edit-Profile" >Update Tuition Information</button>
+    </div>
+  
+  
+  
+  
+  
+        <!-- Modal -->
+        <div class="modal fade" id="tuitionInformation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update Tuition Information</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                
+
+            <form class="mt-3" action="/parent/tuitionInformation" method="POST" enctype="multipart/form-data" >
+
+              <div class="form-group">
+                <label for="class-type" class="text-muted mb-1"><small>Class(s)</small></label>
+              <br>
+              <input title="Class 1" type="checkbox" name="classes" value="1" > Class 1 
+              <input title="Class 2" type="checkbox" name="classes" value="2"> Class 2 
+              <input title="Class 3" type="checkbox" name="classes" value="3"> Class 3 
+              <input title="Class 4" type="checkbox" name="classes" value="4"> Class 4 <br> 
+              <input title="Class 5" type="checkbox" name="classes" value="psc"> PSC
+              <input title="Class 6" type="checkbox" name="classes" value="6"> Class 6 
+              <input title="Class 7" type="checkbox" name="classes" value="7"> Class 7 
+              <input title="Class 8" type="checkbox" name="classes" value="jsc"> JSC 
+              <input title="Class 9 and 10" type="checkbox" name="classes" value="ssc"> SSC <br> 
+              <input title="Inter 1st and 2nd year" type="checkbox" name="classes" value="hsc"> HSC
+              </div>
+              <hr>
+              <div class="form-group">
+                <label for="class-type" class="text-muted mb-1"><small>Subject(s)</small></label>
+              <br>
+              <small>Compulsory Subject List</small>
+              <br>
+              <input title="Bangla" type="checkbox" name="subjects" value="bangla"> Bangla
+              <input title="English" type="checkbox" name="subjects" value="english"> English
+              <input title="Math" type="checkbox" name="subjects" value="math"> Math 
+              <input title="SocialScience" type="checkbox" name="subjects" value="socialscience"> Social Science
+              <br><input title="Science" type="checkbox" name="subjects" value="science"> Science
+              <input title="Religion" type="checkbox" name="subjects" value="religion"> Religion
+              <br>
+            <small>  Science Group Subject List</small>
+              <br>
+              <input title="Physics" type="checkbox" name="subjects" value="physics"> Physics
+              <input title="Chemistry" type="checkbox" name="subjects" value="chemistry"> Chemistry
+              <input title="Biology" type="checkbox" name="subjects" value="biology"> Biology <br>
+              <input title="Higher Math" type="checkbox" name="subjects" value="higher math"> Higher Math                  
+              <input title="Agriculture " type="checkbox" name="subjects" value="agriculture"> Agriculture <br>
+              <input title="Home Economics" type="checkbox" name="subjects" value="home economics"> Home Economics
+              <br>
+              <small> Business Group Subject List</small>
+              <br>
+              <input title="Accounting" type="checkbox" name="subjects" value="accounting"> Accounting
+              <input title="Management" type="checkbox" name="subjects" value="management"> Management
+              <input title="Finance" type="checkbox" name="subjects" value="finance"> Finance
+              <br>
+             <small> Humanities Group Subject List</small>
+              <br>
+              <input title="Sociology" type="checkbox" name="subjects" value="sociology"> Sociology
+              <input title="Economics" type="checkbox" name="subjects" value="economics"> Economics
+              <input title="Social Work" type="checkbox" name="subjects" value="social work"> Social Work <br>
+              <input title="History" type="checkbox" name="subjects" value="history"> History
+              </div>
+
+                <hr>
+              <div class="form-group">
+                <label for="EB-type" class="text-muted mb-1"><small>Medium</small></label>
+                  <input title="Bangla Medium" type="radio" value="Bangla" name="medium"> Bangla  
+                  <input title="English Medium" type="radio" value="English" name="medium"> English  
+              </div>
+
+              <hr>
+              <div class="form-group">
+                <label for="salary-register" class="text-muted mb-1"><small>Salary (in Taka)</small></label>
+                <input min="1" name="salary" id="IN-register" class="form-control" type="number"  placeholder="2000">
+                <input value="/ Negotiate" type="checkbox" name="salary"> Negotiate(<small>Salary will be Negotiate</small>)
+              </div>
+
+        
+                  <button class="py-3 mt-4 btn btn-lg btn-warning btn-block">Update Now</button>
+        
+            </form>
+                 
+              </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+          </div>
+        </div>
+    
+    
+    

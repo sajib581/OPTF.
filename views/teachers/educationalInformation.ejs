@@ -1,0 +1,102 @@
+
+    
+
+
+    
+    <div style="clear: both; position: relative; top: 40px;">
+    <hr >
+    
+    <h2 style="position: relative; left: 20px;" > <u>Educational Information</u> </h2>
+  
+    <div style="position: relative; left: 70px;" >
+     <p> <i>Level of Education (completed) :</i> <b><%=user.educationLevel%></b></p>
+     <p> <i>Educational Background :</i> <b> <%=user.educationalBackground%></b></p>
+     <p> <i>Institute Name:</i> <b> <%=user.instituteName%></b></p>
+     <p> <i>CGPA/GPA :</i> <b> <%=user.result%></b>   </p>
+     <p> <i>Passed Year :</i> <b> <%=user.passed%></b> </p>
+
+    </div>
+    <button style="float: right; position: relative; right: 15px;" type="button" class="btn btn-warning" data-toggle="modal" data-target="#educationalInformation"title="Edit-Profile" >Update Educational Information</button>
+  </div>
+
+
+
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="educationalInformation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Update Educational Information</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+          
+              <form class="mt-3" action="/teacher/educationalInformation" method="POST" enctype="multipart/form-data" >
+  
+                <div class="form-group">
+                  <label for="LE-type" class="text-muted mb-1"><small>Level of Education (completed)</small></label>
+                  <br>
+                  <input title="SSC" type="radio" value="SSC" name="educationLevel"> SSC  
+                  <input title="HSC" type="radio" value="HSC" name="educationLevel"> HSC  
+                  <input title="Honors" type="radio" value="Honors" name="educationLevel"> Honors  
+                  <input title="Masters" type="radio" value="Masters" name="educationLevel"> Masters <br> 
+                </div>
+
+                <div class="form-group">
+                  <label for="EB-type" class="text-muted mb-1"><small>Educational Background</small></label>
+                  <br>
+                  <input title="Science" type="radio" value="Science" name="educationalBackground"> Science  
+                  <input title="Commerce" type="radio" value="Commerce" name="educationalBackground"> Commerce  
+                  <input title="Humanities" type="radio" value="Humanities" name="educationalBackground"> Humanities  <br> 
+                  <input title="Bangla" type="radio" value="Bangla" name="educationalBackground"> Bangla 
+                  <input title="English" type="radio" value="English" name="educationalBackground"> English  
+                  <input title="Others" type="radio" value="Others" name="educationalBackground"> Others 
+                </div>
+
+                <div class="form-group">
+                  <label for="IN-register" class="text-muted mb-1"><small> Institute Name</small></label>
+                  <input name="instituteName" id="IN-register" class="form-control" type="text"  placeholder="Your Institute Name">
+                </div>
+        
+                <div class="form-group">
+                  <label for="result-register" class="text-muted mb-1"><small>CGPA/GPA</small></label>
+                  <input min="1" max="5" name="result"step=0.01 id="result-register" class="form-control" type="number" placeholder="x.xx">
+                </div>
+
+                <div class="form-group">
+                  <label for="EB-type" class="text-muted mb-1"><small>Passed Year</small></label>
+                  <br>
+                  <input title="2020" type="radio" value="2020" name="passed"> 2020  
+                  <input title="2019" type="radio" value="2019" name="passed"> 2019  
+                  <input title="2018" type="radio" value="2018" name="passed"> 2018  
+                  <input title="2017" type="radio" value="2017" name="passed"> 2017 
+                  <input title="2016" type="radio" value="2016" name="passed"> 2016 <br>  
+                  <input title="2015" type="radio" value="2015" name="passed"> 2015  
+                  <input title="2014" type="radio" value="2014" name="passed"> 2014  
+                  <input title="2013" type="radio" value="2013" name="passed"> 2013  
+                  <input title="2012" type="radio" value="2012" name="passed"> 2012  
+                  <input title="2011" type="radio" value="2011" name="passed"> 2011 <br> 
+                  <input title="2010" type="radio" value="2010" name="passed"> 2010  
+                  <input title="Before 2010" type="radio" value="Before 2010" name="passed"> Before 2010 
+                </div>
+                 
+                  
+          
+                    <button class="py-3 mt-4 btn btn-lg btn-warning btn-block">Update Now</button>
+          
+              </form>
+  
+            </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+        </div>
+      </div>
+  
+  
+  

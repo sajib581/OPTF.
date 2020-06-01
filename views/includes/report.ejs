@@ -1,0 +1,70 @@
+
+   
+   <!-- Report This Post  -->
+   <a href="#" data-toggle="modal" data-target="#reportModal"  >Report This Profile</a>
+ </div>
+ </div>
+ </div>
+ 
+
+
+
+
+
+<!-- Modal -->
+
+<!-- data-toggle="modal" data-target="#reportModal" -->
+
+<div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Report This Profile</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+     
+ 
+
+
+  <form action="/report" method="POST">
+
+        <label for="country"><b>Select Reason</b></label>
+        <select id="reason" name="reason">
+          <option value="Fake ID">Fake ID</option>
+          <option value="Others">Others</option>
+        </select>
+     <br>
+      <div>
+        <label for="country"><b>Report Reason(Optional)</b></label>
+        <p class="text-center">
+        <textarea  name="details" id="editor" class="body-content tall-textarea form-control" type="text" placeholder="Let us know your reason in details...(Optional)"></textarea>
+      </p>
+   
+      </div>
+      <input type="text" name="id" value="<%=id%>" hidden>
+      <input type="text" name="username" value="<%=username%>" hidden>
+      <input type="text" name="type" value="<%=type%>" hidden>
+      <input type="text" name="file" value="<%=file%>" hidden>
+      <input type="text" name="gender" value="<%=gender%>" hidden>
+      <input type="text" name="phone" value="<%=phone%>" hidden>
+     
+      <button type="submit" class="btn btn-warning" >Report Now</button>
+
+  </form>
+
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal end  -->

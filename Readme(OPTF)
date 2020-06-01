@@ -1,0 +1,36 @@
+1st) Download it and Unziped it
+2nd) Enter to OPTF folder and crate a file named => .env <= (And save it)
+3rd) Open => .env <= and write => 
+
+                        CONNECTIONSTRING='Your mongodb connctingstring'
+                        PORT='port number(ex:4000)'
+(And save it)
+
+4rd) Now open terminal and write on Terminal => npm install --save
+
+5th) After finishing install npm modules, write on terminal => nodemon
+
+6th) Enjoy!!
+
+
+
+
+Important => for admin account you need to add a database named => admin <= 
+and a data object same like as this => 
+
+                                        username:"admin"
+                                        password:"admin"
+                                        type:"admin"
+
+for admin login goto => localhost:port/admin
+
+
+Thank you
+
+
+
+
+  
+
+
+

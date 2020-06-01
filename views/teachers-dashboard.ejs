@@ -1,0 +1,29 @@
+<%- include('includes/header') %>
+  <!-- header ends here -->
+  <% success.forEach(function(message){ %>
+    
+    <div class="alert alert-success text-center"><%= message %></div>
+
+    <% }) %>
+  
+    <%- include('teachers/profilePicture') %>
+
+    <%- include('teachers/basicInformation') %>
+  
+    <%- include('teachers/educationalInformation') %> 
+    <br>
+   
+    <%- include('teachers/tuitionInformation')  %>
+    <br>
+    
+    <div style="clear: both; position: relative; top: 40px;">
+      <br>
+      <br>
+    </div>
+ 
+
+  
+
+  
+  <!-- footer begins -->
+  <%- include('includes/footer') %>

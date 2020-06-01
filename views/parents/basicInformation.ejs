@@ -1,0 +1,101 @@
+<style>
+  .left1{
+  position: relative;
+  left: 150px;
+  top: 2px;
+}
+
+</style>
+<div class="left1">
+<b><i title="Username" class="fas fa-user-circle"></i></b> <%=user.username%><br>
+<b><i title="Email" class="fas fa-envelope"></i></b> <%=user.email%><br>
+<b><i title="Full Name" class="fas fa-theater-masks"></i></b> <%=user.firstname%> <%= user.lastname%><br>
+<b><i title="phone" class="fas fa-phone"></i></b>(+880) <%=user.phone%><br>
+<b><i title="Address & City" class="fas fa-location-arrow"></i></b> <span style="text-transform: uppercase;"><%=user.address%>,<%=user.city%></span><br>
+<b><i title="Gender" class="fas fa-venus-mars"></i></b> <%=user.gender%><br>
+<b><i title="Overview" class="fas fa-info-circle"></i></b> <%= user.overview%><br>
+
+<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#basicInfo"title="Edit-Profile" >Update Basic Information</button>
+
+</div>
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="basicInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Basic Information</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+      
+              <form class="mt-3" action="/parent/basicInfo" method="POST" enctype="multipart/form-data" >
+
+                 
+    <div class="row">
+      <div class="form-group col">
+        <label for="first-register" class="text-muted mb-1"><small>First Name</small></label>
+        <input value="<%=user.firstname%>" name="firstname" id="firstname-register" class="form-control" type="text" placeholder="First Name" autocomplete="off">
+      </div>
+
+      
+  
+      <div class="form-group col">
+        <label for="lastname-register" class="text-muted mb-1"><small>Last Name</small></label>
+        <input value="<%=user.lastname%>" name="lastname" id="lastname-register" class="form-control" type="text" placeholder="Last Name" autocomplete="off">
+      </div>
+    </div>
+
+
+    <div class="row">
+     <div class="form-group col">
+      <label style="color: black;" for="">Your Location </label> 
+      <select  name="address" id="type" required >
+        <option value="chashara">Chashara</option>
+        <option value="amlapara">Amlapara</option>
+        <option value="nitaigonj">Nitaigonj</option>
+        <option value="jalkuri">Jalkuri</option>
+        <option value="bhuigor">Bhuigor</option>
+        
+    </select>
+     </div>
+      
+      <div class="form-group col">
+        <label for="city-register" class="text-muted mb-1"><small>City</small></label>
+        <input value="<%=user.city%>" name="city" id="city-register" class="form-control" type="text" placeholder="City Name" autocomplete="off">
+      </div>
+
+    </div>
+
+      <div class="form-group">
+        <label for="phone-register" class="text-muted mb-1"><small>Contact Number(+880)</small></label>
+        <input title="Check Your Phone Number"  pattern="[1-9]{1}[0-9]{9}" value="<%=user.phone%>" name="phone" id="phone-register" class="form-control" type="tel" placeholder="16xxxxxxxx">
+      </div>
+     
+
+
+      <div class="form-group">
+        <label for="overview-register" class="text-muted mb-1"><small>Overview</small></label>
+        <input value="<%=user.overview%>"  name="overview" id="overview-register" class="form-control" type="text"  placeholder="write a sort discrption about yourself">
+      </div>
+
+      
+
+        <button class="py-3 mt-4 btn btn-lg btn-warning btn-block">Update Now</button>
+
+              </form>
+
+        </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
